@@ -1,30 +1,6 @@
 /* * {
         box-sizing: border-box;
       } */
-@use 'sass:math';
-
-$d: 6em;
-$r: .5*$d;
-$g: $d*(math.sqrt(2) - 1);
-$s: $d + $g;
-$p: $r/3;
-$q: 2*$p;
-
-html {
-	--sl: calc(#{$q} + 1px) calc(#{$r} + -.5px), 
-				transparent calc(#{$r} + .5px);
-	background: 
-		radial-gradient(#fff $p, 
-				#000 calc(#{$p} + 1px) $q, 
-				#fff var(--sl)) .5*$s .5*$s, 
-		repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 
-			.25*$s .25*$s, 
-		radial-gradient(#000 $p, 
-				#fff calc(#{$p} + 1px) $q, 
-				#000 var(--sl));
-	background-size: $s $s, 2*$s 2*$s;
-	background-blend-mode: lighten
-}
 .first {
   min-height: 100vh;
   position: relative;
