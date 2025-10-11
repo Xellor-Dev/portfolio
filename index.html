@@ -4,21 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danylo Bilyk - Python Developer Portfolio</title>
-    <!-- Подключение Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Настройка шрифта Inter и общего темного фона */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #111827; /* gray-900 */
-            color: #E5E7EB; /* gray-200 */
-            /* Subtle Code Background Pattern (НОВЫЙ БОЛЕЕ ИНТЕРЕСНЫЙ ФОН) */
+            background-color: #111827;
+            color: #E5E7EB;
             background-image: 
                 linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
             background-size: 30px 30px;
         }
-        /* Стили для чистой анимации при прокрутке */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(20px);
@@ -28,17 +24,14 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Стиль для круглого фото с неоновым контуром (фиолетовый) */
         .profile-photo {
-            border: 4px solid #a78bfa; /* violet-500 */
+            border: 4px solid #a78bfa;
             box-shadow: 0 0 20px rgba(167, 139, 250, 0.5);
         }
-        /* Кастомный фиолетовый цвет для акцента */
         .text-electric-violet {
-            color: #c084fc; /* violet-400 */
+            color: #c084fc;
         }
 
-        /* Устранение сдвигов при масштабировании (НОВОЕ ИСПРАВЛЕНИЕ) */
         .will-change-transform {
             will-change: transform;
         }
@@ -48,7 +41,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'electric-violet': '#c084fc', // Новый акцентный цвет (violet-400)
+                        'electric-violet': '#c084fc',
                     }
                 }
             }
@@ -59,9 +52,7 @@
 <body>
     <div id="app" class="min-h-screen p-4 sm:p-8 lg:p-12">
         
-        <!-- === JavaScript Translation Data === -->
         <script>
-            // Объект для хранения переводов всех текстовых элементов
             const translations = {
                 en: {
                     lang_label: "Language",
@@ -148,9 +139,7 @@
             ];
         </script>
         
-        <!-- === HEADER & LANGUAGE SWITCHER === -->
         <header class="flex flex-col sm:flex-row justify-between items-center mb-12 animate-on-scroll is-visible">
-            <!-- Language Switcher -->
             <div class="relative mb-4 sm:mb-0">
                 <label for="language-select" id="lang-label" class="text-sm font-medium text-gray-400 block mb-1">Language</label>
                 <select id="language-select" onchange="setLanguage(this.value)" class="bg-gray-800 border border-gray-700 text-sm rounded-lg focus:ring-violet-400 focus:border-violet-400 block w-full p-2.5 transition duration-300 cursor-pointer">
@@ -161,7 +150,6 @@
                 </select>
             </div>
 
-            <!-- Navigation -->
             <nav class="space-x-4">
                 <a href="#skills" id="nav-skills" class="text-gray-300 hover:text-electric-violet transition duration-300">Skills</a>
                 <a href="#projects" id="nav-projects" class="text-gray-300 hover:text-electric-violet transition duration-300">Projects</a>
@@ -169,10 +157,7 @@
             </nav>
         </header>
 
-        <!-- === HERO SECTION (Danylo Bilyk) === -->
         <section class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 mb-20 p-6 rounded-xl bg-gray-800/70 shadow-2xl animate-on-scroll">
-            
-            <!-- Photo and Links -->
             <div class="flex flex-col items-center">
                 <img id="profile-photo" 
                     class="w-40 h-40 object-cover rounded-full profile-photo transition duration-500 hover:scale-105" 
@@ -182,35 +167,21 @@
                 >
                 <h1 id="user-name" class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">Danylo (Xellor) Bilyk</h1>
                 <p id="user-title" class="text-lg font-medium text-electric-violet mt-1">Python Developer (Backend)</p>
-                
-                <!-- Social Links Group -->
                 <div class="flex space-x-3 mt-4">
-                    <!-- GitHub -->
-                     
-
                     <a href="https://github.com/Xellor-Dev" target="_blank" class="p-3 rounded-full bg-gray-700 hover:bg-violet-400/30 text-white hover:text-electric-violet transition duration-300 shadow-md group" aria-label="GitHub">
-                        <!-- SVG for GitHub -->
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/></svg>
                     </a>
-                    <!-- Telegram (Placeholder Link) -->
                     <a href="https://t.me/thexellor" target="_blank" class="p-3 rounded-full bg-gray-700 hover:bg-violet-400/30 text-white hover:text-electric-violet transition duration-300 shadow-md group" aria-label="Telegram">
-                        <!-- SVG for Telegram (Source: Lucide Icons) -->
                          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2a1 1 0 0 1 .932.638l7 18a1 1 0 0 1-1.326 1.281L13 19.517V13a1 1 0 1 0-2 0v6.517l-5.606 2.402a1 1 0 0 1-1.326-1.281l7-18A1 1 0 0 1 12 2Z" clip-rule="evenodd"/></svg>
                         </a>
-                    <!-- LinkedIn (Placeholder Link) -->
                     <a href="https://www.linkedin.com/in/xellor" target="_blank" class="p-3 rounded-full bg-gray-700 hover:bg-violet-400/30 text-white hover:text-electric-violet transition duration-300 shadow-md group" aria-label="LinkedIn">
-                        <!-- SVG for LinkedIn -->
                          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd"/><path d="M7.2 8.809H4V19.5h3.2V8.809Z"/></svg>
                     </a>
-                    <!-- Instagram (Placeholder Link) -->
                     <a href="https://www.instagram.com/xellorrr" target="_blank" class="p-3 rounded-full bg-gray-700 hover:bg-violet-400/30 text-white hover:text-electric-violet transition duration-300 shadow-md group" aria-label="Instagram">
-                        <!-- SVG for Instagram -->
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/></svg>
                     </a>
                 </div>
             </div>
-            
-            <!-- Objective -->
             <div class="md:w-3/5 md:pl-8 mt-6 md:mt-0">
                 <h2 id="section-about" class="text-xl font-semibold mb-3 border-b border-gray-700 pb-1 text-electric-violet">Objective</h2>
                 <p id="about-text" class="text-gray-300 leading-relaxed text-base">Seeking an opportunity to launch my career in IT and apply my knowledge to real-world commercial projects. I am a fast learner, dedicated to putting in my best effort, and ready to grow as part of a team.</p>
@@ -218,42 +189,32 @@
         </section>
 
 
-        <!-- === SKILLS SECTION (MAIN FOCUS) === -->
         <section id="skills" class="max-w-4xl mx-auto mb-20 animate-on-scroll">
             <h2 id="section-skills" class="text-3xl font-bold text-white mb-6 border-b border-violet-400/50 pb-2 text-center sm:text-left">Technical Skills</h2>
             <div id="skills-container" class="flex flex-wrap gap-4 justify-center sm:justify-start">
-                <!-- Skills are populated by JavaScript -->
             </div>
         </section>
 
-        <!-- === GOALS & STRENGTHS SECTION === -->
         <section id="about" class="max-w-4xl mx-auto mb-20 animate-on-scroll">
             <h2 id="section-goals" class="text-3xl font-bold text-white mb-6 border-b border-violet-400/50 pb-2 text-center sm:text-left">Strengths & Goals</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Goal Card 1 -->
                 <div class="p-5 bg-gray-800 rounded-lg shadow-lg hover:bg-gray-700/70 transition duration-300 will-change-transform">
                     <p id="goal-1" class="text-lg font-medium text-gray-300">Fast learner with strong analytical skills.</p>
                 </div>
-                <!-- Goal Card 2 -->
                 <div class="p-5 bg-gray-800 rounded-lg shadow-lg hover:bg-gray-700/70 transition duration-300 will-change-transform">
                     <p id="goal-2" class="text-lg font-medium text-gray-300">Eager to take on challenging tasks.</p>
                 </div>
-                <!-- Goal Card 3 -->
                 <div class="p-5 bg-gray-800 rounded-lg shadow-lg hover:bg-gray-700/70 transition duration-300 will-change-transform">
                     <p id="goal-3" class="text-lg font-medium text-gray-300">Motivated to solve problems with code.</p>
                 </div>
-                <!-- Goal Card 4 -->
                 <div class="p-5 bg-gray-800 rounded-lg shadow-lg hover:bg-gray-700/70 transition duration-300 will-change-transform">
                     <p id="goal-4" class="text-lg font-medium text-gray-300">Proactive and independent researcher.</p>
                 </div>
             </div>
         </section>
 
-        <!-- === PROJECTS SECTION (Placeholder) === -->
         <section id="projects" class="max-w-4xl mx-auto mb-16 animate-on-scroll">
             <h2 id="section-projects" class="text-3xl font-bold text-white mb-6 border-b border-violet-400/50 pb-2 text-center sm:text-left">Projects & Experience</h2>
-            
-            <!-- Placeholder Card for Projects -->
             <div class="p-8 bg-gray-800 rounded-xl text-center shadow-lg border border-gray-700/50 hover:border-violet-400/50 transition duration-300 will-change-transform">
                 <h3 id="project-placeholder-title" class="text-2xl font-semibold text-white mb-3">Project Portfolio Coming Soon</h3>
                 <p id="project-placeholder-desc" class="text-gray-400">I am currently focusing on building and refining my key backend projects. Stay tuned for updates!</p>
@@ -261,22 +222,16 @@
                     <span class="inline-block p-2 rounded bg-gray-900">#portfolio_in_progress</span>
                     <span class="inline-block p-2 rounded bg-gray-900 ml-2">#backend_focus</span>
                 </div>
-                <!-- Note: When you add projects, you can use the card structure from the Goals section -->
             </div>
         </section>
 
-        <!-- === FOOTER === -->
         <footer class="max-w-4xl mx-auto pt-6 border-t border-gray-800 text-center text-gray-500 text-sm">
             <p>© 2024 Danylo Bilyk. Built with Python Backend Logic and Tailwind CSS.</p>
         </footer>
 
     </div>
 
-    <!-- === JavaScript for Interactivity and Localization === -->
     <script>
-        // --- 1. Language Switching Logic ---
-
-        // Элементы, которые нужно обновить при смене языка
         const elementsToTranslate = [
             { id: 'lang-label', key: 'lang_label' },
             { id: 'user-name', key: 'name' },
@@ -298,39 +253,30 @@
         ];
 
         function setLanguage(lang) {
-            document.documentElement.lang = lang; // Устанавливаем атрибут lang
+            document.documentElement.lang = lang;
             const currentTranslations = translations[lang];
 
-            // Обновляем все текстовые элементы
             elementsToTranslate.forEach(item => {
                 const element = document.getElementById(item.id);
                 if (element && currentTranslations[item.key]) {
                     element.textContent = currentTranslations[item.key];
                 }
             });
-
-            // Сохраняем выбор пользователя
             localStorage.setItem('portfolioLang', lang);
         }
-
-        // --- 2. Skill Chips Rendering ---
 
         function renderSkills() {
             const container = document.getElementById('skills-container');
             if (!container) return;
 
-            // Генерируем HTML для каждого навыка
             const html = skillsList.map(skill => `
                 <span class="px-4 py-2 bg-gray-800 text-electric-violet rounded-full text-sm font-mono border border-gray-700 
                               transition duration-300 transform hover:scale-105 hover:bg-violet-400/20 hover:border-electric-violet cursor-default shadow-md will-change-transform">
                     ${skill}
                 </span>
             `).join('');
-
             container.innerHTML = html;
         }
-
-        // --- 3. Scroll Animation (IntersectionObserver) ---
 
         function setupAnimations() {
             const elements = document.querySelectorAll('.animate-on-scroll');
@@ -338,8 +284,6 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
-                        // Не останавливаем наблюдение для первого элемента (header), чтобы он был виден сразу. 
-                        // Для остальных можно остановить, чтобы анимация сработала только один раз при скролле.
                         if (entry.target.id !== 'app') {
                             observer.unobserve(entry.target); 
                         }
@@ -347,27 +291,20 @@
                 });
             }, {
                 rootMargin: '0px',
-                threshold: 0.1 // Срабатывает, когда 10% элемента видно
+                threshold: 0.1
             });
 
             elements.forEach(element => {
                 observer.observe(element);
             });
         }
-
-
-        // --- 4. Initialization ---
-
         window.onload = function() {
-            // Инициализация языка (загрузка из localStorage или установка EN по умолчанию)
             const savedLang = localStorage.getItem('portfolioLang') || 'en';
             document.getElementById('language-select').value = savedLang;
             setLanguage(savedLang);
 
-            // Рендеринг чипов навыков
             renderSkills();
 
-            // Запуск анимаций
             setupAnimations();
         };
 
