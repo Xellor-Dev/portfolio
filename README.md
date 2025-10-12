@@ -1,4 +1,4 @@
-!(image)[image.png]
+![Photo](image.png)
 # Danylo Bilyk - Python Backend Developer Portfolio
 
 ## 🚀 Live Demo
