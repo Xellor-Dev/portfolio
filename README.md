@@ -41,10 +41,10 @@ I am actively seeking Junior Python Backend Developer positions or internships. 
 | **Platform** | **Link (Replace placeholders with your real URLs!)** | 
 | :--- | :--- |
 | **GitHub** | `https://github.com/Xellor-Dev` | 
-| **LinkedIn** | `[Your_LinkedIn_URL]` | 
-| **Telegram** | `[Your_Telegram_URL]` | 
-| **Instagram** | `[Your_Instagram_URL]` | 
+| **LinkedIn** | `https://www.linkedin.com/in/xellor` | 
+| **Telegram** | `https://t.me/thexellor` | 
+| **Instagram** | `https://www.instagram.com/xellorrr` | 
 
 ***
 *Last updated: October 2025*
-```eof
+
