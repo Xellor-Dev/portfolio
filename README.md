@@ -38,7 +38,7 @@ The website highlights my proficiency and experience with the following backend 
 
 I am actively seeking Junior Python Backend Developer positions or internships. I am eager to contribute, learn, and grow within a professional team environment.
 
-| **Platform** | **Link (Replace placeholders with your real URLs!)** | 
+| **Platform** | **Link** | 
 | :--- | :--- |
 | **GitHub** | `https://github.com/Xellor-Dev` | 
 | **LinkedIn** | `https://www.linkedin.com/in/xellor` | 
